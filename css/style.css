@@ -1,0 +1,128 @@
+body{   background-image:url('./../background.jpg'); background-repeat:repeat;  margin:0; padding:0;  color: #8A8985;  font-family:Consolas; }
+#page{  background-repeat:repeat;   background-image:url('./../background.jpg'); width:1000px;  margin:auto; }
+#barre{ width:100%;    float:top;            text-align:right; }
+#conteneur{ padding:0;    margin:auto;  margin-top:30px;   }
+#photo{ background-color:#353535; border:#353535 8px solid;   text-align:left; height:268px; width:1000px; }
+#objet{ height:260px; background-color:#47474B;    float:left; float:right;  }
+#menu{  background-image:url('./../MENU.jpg');border-bottom:3px solid #DAE0E3; text-align:center; width:99%; height:38px;  font-family:verdana , Bitstream Vera Sans,sans-serif; font-size:15px; border-bottom-right-radius:5px; border-top-right-radius:5px; }
+span{   background-image:url('./../span.png');font-size:16px; color:#DADADA; display:block; height:30px; width:100%; }
+#centre_page{border-left:5px #353535 solid; background-color:#353535;  padding-top:20px;   overflow:auto;  }
+#compte_barre{float:right; height:35px;}
+#mini_barre{background-image:url('./../mini_barre.jpg'); height:35px; width:240px; border-bottom-left-radius:10px;}
+#menu_compte{ visibility:hidden;  color:#DADADA; width:240px; height:100px;  background-image:url('./../compte.jpg'); font:white; border-bottom-left-radius:20px; text-align:left; }
+#compte_barre:hover #menu_compte{ position:absolute;  visibility:visible; -webkit-transition: border-radius 2s; transition: opacity 0.5s ease-in-out 0.2s, left 0 linear 0.2s, z-index 0 linear 0.2s; }
+#compte_barre:hover #mini_barre{border-bottom-left-radius:0px;}
+#menu_compte a{ text-decoration:none;}
+#menu_compte a:visited{ color:#DADADA; }
+#barre input { border:0PX; }
+#footer {
+font-family: Century Gothic, Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+margin:auto;
+height:10px;
+bottom:0;
+}
+/* ***********************************************************************************************************/
+.color1{
+background-color:#DADADA;
+}
+.color2{
+background-color:white;
+}
+#menu a{
+color:#313940; 
+text-decoration:none; 
+margin-left:10px; 
+margin-right:10px;  
+line-height:34px;  
+}
+#menu a:hover{   
+transition:background-position 1s;
+background-position:10px 0;
+color:#258AFA;
+}
+/* **********************************************************************************************************/
+#menu li div{margin-top:10px;}
+#menu ul{ padding:0 ; margin:0; }
+#menu  li { float:left; list-style:none; position:relative; }
+/* **********************************input*******************************************************************/
+.c1{ 
+margin-left:15px; 
+margin-top:7px;
+height:25px; 
+width:140px; 
+border-top-right-radius:5px; 
+border-top-right-radius:5px;
+}
+
+.c2{
+margin-left:85px;
+margin-top:7px;
+height:25px; 
+width:140px; 
+border: 2px solid black;
+}
+
+.f{
+height:30px; 
+width:140px; 
+}
+
+.f2{
+height:30px; 
+width:30px; 
+}
+/****submit****/
+#menu ul ul {
+text-align:left; 
+position:absolute;  
+top:34px;
+visibility:hidden; 
+font-size:14px;
+background-color:#474747; 
+opacity: 0.9; 
+border-bottom:3px #DADADA solid; 
+border-right:2px #DADADA solid; 
+border-left:1px #DADADA solid; 
+width:135px;
+border-bottom-right-radius:10px; 
+border-bottom-left-radius:10px; 
+overflow:hidden;
+}
+
+#menu ul{visibility:visible; }
+#menu ul ul a{
+text-align:left; 
+display:block; 
+width:130px; 
+height:30px; 
+color:#DADADA; 
+}
+
+#menu ul a::after{
+content: '';
+position: absolute;
+top: 0; left: 0; 
+right: 0; bottom: 0;
+    background: radial-gradient(
+                     circle farthest-side at 0 0, 
+                     rgba(255,255,255,0) 90%,
+                     rgba(255,255,255,.8) 98%,
+                     rgba(255,255,255,0) 100%
+                 ) no-repeat;
+	background-position: -190px 0;
+}
+#menu ul ul a::after{
+background-position: -146px 0;
+}
+#menu ul a:hover::after,
+#menu ul a:focus::after{
+    transition: background-position 1s;
+    background-position: 10px 0;
+}
+/* ***************************************************************************************************************/
+#menu #menu_top_titre { background-image:url('./../MENU_TITRE.jpg'); width:18%; border-bottom-right-radius:10px; border-top-right-radius:10px;}
+#menu #menu_top_titre a{color:#DADADA;}
+#menu ul li:hover ul{visibility:visible; transition:2s ease 0.15s;}
+#menu ul li ul li:hover ul{visibility:visible; transition:2s ease 0.15s;}
+/*********************************************************Formulaire**********************************************/

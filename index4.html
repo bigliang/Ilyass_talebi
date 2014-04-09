@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slicebox - 3D Image Slider with Fallback" />
+        <meta name="keywords" content="jquery, css3, 3d, webkit, fallback, slider, css3, 3d transforms, slices, rotate, box, automatic" />
+		<meta name="author" content="Pedro Botelho for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="Slicebox/Slicebox/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="Slicebox/Slicebox/css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="Slicebox/Slicebox/css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	</head>
+	<body>
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<img src="Images/woork/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3><a href="Filiers.php?ABD">Administrateur de bases de donn&#233;es</a></h3>
+						</div>
+					</li>
+					<li>
+						<img src="Images/woork/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3><a href="Filiers.php?ASR">Administration des Syst&#232;mes et R&#233;seaux</a></h3>
+						</div>
+					</li>
+					<li>
+						<img src="Images/woork/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3><a href="Filiers.php?GL">G&#233;nie Logiciel</a></h3>
+						</div>
+					</li>
+					<li>
+						<img src="Images/woork/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3><a href="Filiers.php?JC">D&#233;veloppeurs Java C++</a></h3>
+						</div>
+					</li>
+					<li>
+						<img src="Images/woork/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3><a href="Filiers.php?TR">Techniciens R&#233;seaux</a></h3>
+						</div>
+					</li>
+					<li>
+						<img src="Images/woork/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3><a href="Filiers.php?TWCE">TWCE : Technologies Web et Commerce Electronique</a></h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+	</div>
+	<script type="text/javascript" src="defileure.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+	</body>
+</html>	
