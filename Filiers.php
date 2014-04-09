@@ -1,0 +1,24 @@
+<?php
+include("container.php");
+?>
+<style>
+#cont{background-color:white;}
+</style>
+<div id="cont">
+<?php
+if(isset($_GET["ASR"])){
+include('filieres/asr.html');
+}if(isset($_GET["TWCE"])){
+include('filieres/twce.html');
+}if(isset($_GET["JC"])){
+include('filieres/jc.html');
+}if(isset($_GET["TR"])){
+include('filieres/tr.html');
+}if(isset($_GET["GL"])){
+include('filieres/gl.html');
+}if(isset($_GET["ABD"])){
+include('filieres/abd.html');
+}ELSE{
+}
+?>
+</div>
